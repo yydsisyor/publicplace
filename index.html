@@ -24,17 +24,23 @@
 </head>
 <body>
 
-    <h1>抱歉！贷款通道暂时无法使用。</h1>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <h1 id="content">加载中...</h1>
+
 <br>
 <br>
     <div class="iframe-container">
         <iframe src="https://yydsisyor.github.io/navigation" frameborder="0"></iframe>
     </div>
 
+    <script>
+
+
+// 设置延时
+setTimeout(() => {
+    document.getElementById("content").innerText="抱歉！贷款通道暂时无法使用。"
+
+}, 3000); // 延时 3000 毫秒（3秒）
+
+    </script>
 </body>
 </html>
