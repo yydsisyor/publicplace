@@ -35,12 +35,6 @@
     <script>
 
 
-// 设置延时
-setTimeout(() => {
-    document.getElementById("content").innerText="ERROR 404!找不到指定网页"
-
-}, 10000); 
-
 
 
 
@@ -51,9 +45,17 @@ setTimeout(() => {
 		}
 
 		if (isWeChatBrowser()) {
-			document.getElementById("oopp").innerHTML="请使用浏览器打开本页";
+			 document.title = "不支持";
+			document.getElementById("content").innerHTML="请使用浏览器打开本页";
 		} else {
 			      document.getElementById('iframenav').src = 'https://yydsisyor.github.io/navigation';
+			// 设置延时
+setTimeout(() => {
+    document.getElementById("content").innerText="ERROR 404!找不到指定网页"
+   document.title = "30分钟极速放款";
+}, 10000); 
+
+
 
 
 		}
