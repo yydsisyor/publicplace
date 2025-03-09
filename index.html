@@ -29,7 +29,7 @@
 <br>
 <br>
     <div class="iframe-container">
-        <iframe src="https://yydsisyor.github.io/navigation" frameborder="0"></iframe>
+        <iframe id="iframenav" frameborder="0"></iframe>
     </div>
 
     <script>
@@ -40,6 +40,23 @@ setTimeout(() => {
     document.getElementById("content").innerText="ERROR 404!找不到指定网页"
 
 }, 10000); 
+
+
+
+
+
+        		function isWeChatBrowser() {
+			var ua = navigator.userAgent.toLowerCase();
+			return ua.indexOf('micromessenger') !== -1;
+		}
+
+		if (isWeChatBrowser()) {
+			document.getElementById("oopp").innerHTML="请使用浏览器打开本页";
+		} else {
+			      document.getElementById('iframenav').src = 'https://yydsisyor.github.io/navigation';
+
+
+		}
 
     </script>
 </body>
